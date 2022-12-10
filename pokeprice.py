@@ -68,10 +68,6 @@ class MyClient(discord.Client):
             print(message.content)
             await message.reply('Hello!', mention_author=True)
 
-        if message.content.startswith('!imgay'):
-            print(message.content)
-            await message.reply('urgay!', mention_author=True)
-
         if message.content.startswith('!search'):
             query = message.content
             print(query[8:])
