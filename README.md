@@ -1,3 +1,4 @@
-# pokeprice
+# TF-Similarity Pokemon Classifier
+A machine learning model to classify Pokémon cards
 
-Discord bot that provides up-to-date pokemon card prices.
+Built on Tensorflow Similarity: https://github.com/tensorflow/similarity

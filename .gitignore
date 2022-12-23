@@ -1,2 +1,5 @@
-*.json
 *.ipynb_checkpoints
+*.json
+models/
+pokemon_data/
+test_images/
