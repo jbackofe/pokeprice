@@ -35,13 +35,13 @@ logging.basicConfig(
     datefmt="%Y-%m-%dT%H:%M:%SZ",
     level=logging.DEBUG)
 
-class StdOutCallback(tf.keras.callbacks.ProgbarLogger):
-    # a simple callback that picky-backs of the progress bar callback. It prints metrics to StdOut.
-    def on_batch_end(self, batch, logs=None):
-        logs = logs or {}
-        for k in self.params['metrics']:
-            if k in logs:
-                print("{}={}".format(k,logs[k]))
+class StdOutCallback(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        logging.info(
+            "Epoch {:4d}/{}. accuracy={:.4f} - loss={:.4f}".format(
+                epoch+1, logs["accuracy"], logs["loss"]
+            )
+        )
 
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
