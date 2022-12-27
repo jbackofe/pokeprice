@@ -38,8 +38,10 @@ logging.basicConfig(
 class StdOutCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         logging.info(
-            "Epoch {:4d}: accuracy={:.4f} - loss={:.4f}".format(
-                epoch+1, logs["accuracy"], logs["loss"]
+            "Epoch {:4d}: accuracy={:.4f} - loss={:.4f} \
+                val_accuracy={:.4f} - val_loss={:.4f}".format(
+                epoch+1, logs["accuracy"], logs["loss"],
+                logs["val_accuracy"], logs["val_loss"]
             )
         )
 
