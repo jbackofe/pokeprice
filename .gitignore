@@ -4,4 +4,4 @@ __pycache__/
 logs/*
 images/train/
 images/test/
-models/*
+models
