@@ -1,5 +1,7 @@
 *.ipynb_checkpoints
 *.json
-models/
-pokemon_data/
-test_images/
+__pycache__/
+logs/*
+images/train/
+images/test/
+models/*
