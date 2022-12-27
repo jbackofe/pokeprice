@@ -81,8 +81,8 @@ def update_tcg_table():
 
     cards['dt'] = date.today()
 
-    # save to csv
-    cards.to_csv('price_data/cards_2022_12_06.csv')
+    # save to csv (add time-stamps to csv filename)
+    cards.to_csv('price_data/cards.csv')
 
 if __name__ == "__main__":
     print('Updating tcg table...')

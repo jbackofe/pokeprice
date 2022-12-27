@@ -191,7 +191,7 @@ class MyClient(discord.Client):
             await message.reply(listToString(outputs), mention_author=True)
 
 # Load card price table
-cards = pd.read_csv('../price_data/cards_2022_12_06.csv')
+cards = pd.read_csv('../price_data/cards.csv')
 
 # Load classifier model
 reloaded_model = load_model('../models/pokemon_similarity')
